@@ -372,6 +372,7 @@ else
             activeAccount = null
             activeSession = null
             activeImage = null
+            try $('#tweet-editor').blur()
             return
 
         showTweetWindow = ->
@@ -403,7 +404,7 @@ else
             $('#tweet-submit').css opacity: 0.5
 
             Menus.setTweetWindowActive true
-            setTimeout (-> $('#tweet-editor').focus()), 100
+            setTimeout (-> try $('#tweet-editor').focus()), animDuration * 1.5
             $('#tweet-from').text "@" + activeAccount.screen_name
 
             return
