@@ -130,11 +130,11 @@ body {
 }
 #mainMenu {
     position: relative;
-    left: -210px;
+    left: -260px;
     border-left: none !important;
     padding: 10px;
     font-size: 13px;
-    width: 200px;
+    width: 250px;
 }
 #mainMenu h1 {
     font-weight: 700;
@@ -144,6 +144,10 @@ body {
 }
 #mainMenu h1 small {
     font-size: 60%;   
+}
+#copying {
+    font-weight: 400;
+    font-size: 70%;
 }
 
 #userMenu {

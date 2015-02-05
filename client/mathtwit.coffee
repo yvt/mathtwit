@@ -192,7 +192,7 @@ else
             mainMenuActive = active
             if active
                 @setUserMenuActive false
-            $('#mainMenu').stop().animate left: (if active then 0 else -210), animDuration, 'easeOut'
+            $('#mainMenu').stop().animate left: (if active then 0 else -260), animDuration, 'easeOut'
             $('#branding').toggleClass 'active', active
             @update()
             return
