@@ -301,7 +301,7 @@ else
                 alert msg
 
             $.ajax
-                url: "/tw/api.json"
+                url: "tw/api.json"
                 type: "POST"
                 data:
                     action: "nonce"
@@ -310,7 +310,7 @@ else
                         onfail(data.error)
                     else
                         ondone()
-                        window.location.href = "/tw/auth?action=signin&nonce=#{data.nonce}"
+                        window.location.href = "tw/auth?action=signin&nonce=#{data.nonce}"
                     return
                 error: (err) =>
                     onfail "network error."
@@ -330,7 +330,7 @@ else
 
             # query user info
             $.ajax
-                url: "/tw/api.json"
+                url: "tw/api.json"
                 type: "POST"
                 data:
                     action: "info"
@@ -436,7 +436,7 @@ else
 
 
             $.ajax
-                url: "/tw/api.json"
+                url: "tw/api.json"
                 type: "POST"
                 data:
                     action: "tweet"
