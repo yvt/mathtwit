@@ -109,6 +109,11 @@ else
         return 1 - per
     animDuration = 300
 
+    invokeLater = (func) ->
+        setTimeout func, 0
+        return
+    makeInvokeLater = (func) -> -> invokeLater func
+
     fastClick = (e, onclick) ->
         e.each ->
             el = $(@)
@@ -262,7 +267,7 @@ else
 
             tweet.appendTo e
             signout = $('<button class="signout">').text "Sign Out"
-            fastClick signout, ->
+            fastClick signout, makeInvokeLater ->
                 if confirm "Are you sure to sign out @#{a.screen_name}?"
                     for aa, i in accounts
                         if aa.user_id == a.user_id
@@ -714,7 +719,7 @@ else
             return
         return
 
-    fastClick $('#clear-all'), ->
+    fastClick $('#clear-all'), makeInvokeLater ->
         if confirm "Are you sure you want to start over?"
             $('#editor').val ""
             onChange()
