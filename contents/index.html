@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MathTwit</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body class="">
+		<div id="header" class="unselectable">
+			<a id="branding">
+				MathTwit
+			</a>
+            <a class="right" id="user-dropdown">Sign in</a>
+            <a id="clear-all" class="right">Clear</a>
+            <div id="menuContainer" class="needsLayer">
+                <div id="mainMenu" class="menu needsLayer">
+                    <h1>MathTwit <small>v0.0.1</small></h1>
+                    <p>Made with Emscripten technology and mimeTeX.</p>
+                    <p><a href="#" class="link">Fork me!</a></p>
+                </div>
+                <div id="userMenu" class="menu needsLayer">
+                    <ul>
+                        <!--<li><button class="tweet">Tweet</button><button class="signout">Sign Out</button><img src="https://pbs.twimg.com/profile_images/533992549606641664/Br5tHmFH.jpeg"><span class="screenname">@WWWWWWWWWWWWWWW</span></li>-->
+                    </ul>
+                    <a id="signin"><span id="signin-text">Sign in...</span><span class="plus1"></span><span class="plus2"></span></a>
+                </div>
+            </div>
+		</div>
+        <div id="fader" class="needsLayer">
+        </div>
+        <div id="body">
+            <textarea id="editor" spellcheck="false" ></textarea>
+            <div id="resultView" class="needsLayer">
+                <div class="handle"><div class="bar"></div></div>
+                <img id="image" class="">
+                <div id="errorView"><h2>Rendering Failed.</h2><div id="errorBody"></div></div>
+            
+                
+            </div>
+            <div id="handleEventListener" class="unselectable"></div>
+        </div>
+        <div id="tweet-window" class="needsLayer">
+            <header>
+                <button id="tweet-submit">Tweet</button>
+                <button id="tweet-cancel">Cancel</button>
+                <span id="tweet-from">@WwwwwwwwwWWW</span>
+            </header>
+            <textarea id="tweet-editor" placeholder="Text to Tweet"></textarea>
+            <div id="tweet-image-view">
+                <img>
+            </div>
+        </div>
+		<script type="application/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script type="application/javascript" src="jquery.mousecapture.js"></script>
+		<script type="application/javascript" src="mathtwit.js"></script>
+	</body>
+</html>

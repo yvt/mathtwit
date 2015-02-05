@@ -1,0 +1,383 @@
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.needsLayer {
+    -webkit-transform: translateZ(0); 
+    -moz-transform: translateZ(0); 
+    -o-transform: translateZ(0); 
+    -ms-transform: translateZ(0);
+    will-change: left, top;
+}
+
+a.link {
+    color: #5aaae5;   
+    text-decoration: underline;
+}
+a.link:hover {
+    text-decoration: none;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html, textarea, button {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+html, textarea {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {   
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+body {
+    margin: 0;
+    display: block;
+}
+
+#header {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    background: #5aaae5;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    z-index: 2;
+}
+
+@media screen and (min-height: 400px) {
+    #header {
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    #body {
+        top: 40px !important;   
+    }
+}
+
+#branding {
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 700;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-left: 4px;
+    padding: 0 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#header .right {
+    float: right;
+    text-transform: uppercase;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: inherit;
+    margin-right: 4px;
+    padding: 0 4px;
+    cursor: pointer;
+    
+}
+#header > a:active, #header > a.active, #header > a.pressed {
+    background: white;
+    color: #5aaae5;
+}
+
+#clear-all {
+    font-size: 80%; 
+}
+
+#menuContainer {
+    clear: both;
+    height: 0px;
+    position: relative;
+    top: 0px;
+}
+#menuContainer .menu {
+    position: absolute;
+    top: 0;
+    background: white;
+    border: 2px solid #5aaae5;
+    border-top: none;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    color: #444;
+    box-sizing: border-box;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+#mainMenu {
+    position: relative;
+    left: -210px;
+    border-left: none !important;
+    padding: 10px;
+    font-size: 13px;
+    width: 200px;
+}
+#mainMenu h1 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#mainMenu h1 small {
+    font-size: 60%;   
+}
+
+#userMenu {
+    padding: 10px;  
+    font-size: 15px; 
+    right: -310px;
+    border-right: none !important;
+    width: 300px;
+}
+#userMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+#userMenu ul li {
+    text-indent:  30px;  
+    text-transform: uppercase;
+    position: relative;
+    clear: both;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+#userMenu ul li .screenname {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#userMenu ul li img {
+    position: absolute;
+    width: 24px; height: 24px;
+    left: 0px; top: 0px;
+    border-radius: 4px;
+}
+#userMenu ul li button {
+    float: right; 
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 2px 4px;
+}
+#userMenu ul li button.pressed {
+    opacity: 0.8;   
+}
+#userMenu ul li button.tweet {
+    background: #00af00;   
+}
+#userMenu ul li button.signout {
+    background: #af0000;   
+}
+#signin {
+    display: block;
+    text-indent: 30px;
+    position: relative;
+    cursor: pointer;
+}
+#signin.pressed {
+    opacity: 0.8;
+}
+#signin .plus1, #signin .plus2 {
+    position: absolute;
+    background: #5aaae5;
+}
+#signin .plus1 {
+    left: 5px; top: 10px; height: 2px; width: 14px;
+}
+#signin .plus2 {
+    left: 11px; top: 4px; height: 14px; width: 2px;
+}
+
+#fader {
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    will-change: opacity;
+    z-index: 1;
+    display: none;
+}
+
+#body {
+    position: absolute;
+    left: 0; right: 0;
+    top: 30px; bottom: 0;
+}
+
+#editor {
+    border: none;
+    padding: 4px;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    
+    position: absolute;
+    left: 0; right: 0;
+    top: 0;
+    height: 100px;
+}
+
+#resultView {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    top: 100px; width: 100%;
+    box-sizing: padding-box;
+    background: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none; /* made visible after load */
+}
+#resultView .handle {
+    background: #5aaae5;
+    height: 10px;
+    overflow: hidden;
+}
+.handle .bar {
+    height: 4px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 50px;
+    margin: 3px auto;
+}
+#handleEventListener {
+    position: absolute;
+    left: 0; right: 0;
+    height: 30px;
+    top: 95px;
+    cursor: ns-resize;
+    background: rgba(255,255,255,0.001);
+}
+#image {
+    position: absolute;
+}
+#errorView {
+    display: none;
+    color: gray;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    
+}
+#errorView h2 {
+    margin: 0;  
+    font-weight: 700;
+}
+
+/* ------------------- TWEET ------------------- */
+
+#tweet-window {
+    position: absolute;
+    left: 0; top: 0; right: 0;
+    min-height: 100%;
+    background: white;
+    z-index: 3;
+    color: #333;
+    display: none;
+}
+
+#tweet-window > header {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #5aaae5;
+}
+
+@media screen and (min-height: 400px) {
+    #tweet-window > header {
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+#tweet-from {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#tweet-submit, #tweet-cancel {
+    color: white;
+    border: none;
+    font-size: inherit;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    margin: 3px 3px;
+}
+@media screen and (min-height: 400px) {
+    #tweet-submit, #tweet-cancel {
+        line-height: 1.8;
+        padding: 0px 10px;
+        margin: 4px 4px;
+    }
+}
+#tweet-submit {
+    float: left;
+    background: #5aaae5;
+}
+#tweet-submit.pressed {
+    background: #81bbe6;
+}
+#tweet-cancel {
+    float: right;   
+    background: white;
+    color: #777;
+}
+#tweet-cancel.pressed {
+    opacity: 0.8;   
+}
+
+#tweet-editor {
+    border: none;
+    padding: 4px;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    
+    height: 80px;
+}
+#tweet-image-view {
+    text-align: center;
+    margin-top: 10px;
+}
