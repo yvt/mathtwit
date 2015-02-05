@@ -291,7 +291,7 @@ else
                         onfail(data.error)
                     else
                         ondone()
-                        window.location = "/tw/auth?action=signin&nonce=#{data.nonce}"
+                        window.location.href = "/tw/auth?action=signin&nonce=#{data.nonce}"
                     return
                 error: (err) =>
                     onfail "network error."
